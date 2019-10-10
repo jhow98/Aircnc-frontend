@@ -17,13 +17,15 @@ export default function Dashboard(){
         loadSpots();
     }, [])
     return (
-        <>
+       <>
             <ul className="spot-list">
                 {spots.map(spot => (
-                    <li key={spot._id}>
-                        <header style={{ backgroundImage: `url(${spot.thumbnail_url})` }} />                            <strong>{spot.company}</strong>
+                 
+                        <li key={spot._id}>
+                            <header style={{ backgroundImage: `url(${spot.thumbnail_url})` }} />                            
+                            <strong>{spot.company}</strong>
                             <span>{spot.price ? `R$${spot.price}/dia` : 'GRATUITO'}</span>
-                    </li>
+                        </li>
                 ))}
             </ul>
 
